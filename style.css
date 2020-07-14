@@ -1,0 +1,269 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    width:100%;
+    background-color:#212350;
+    font-family: sans-serif;
+    position:relative;
+}
+.score{
+    color: rgb(224, 224, 224);
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.score h2{
+    font-size: 30px;
+}
+.score p{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+.intro{
+    color: rgb(224, 224, 224);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: opacity 0.5s ease;
+    /* opacity: 0; */
+}
+.intro h1{
+    font-size: 50px;
+    margin-left: 100px;
+}
+.intro button,
+.match button{
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: rgb(224, 224, 224);
+    font-size: 20px;
+    background-color: #2d7560;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+.intro button:hover,
+.match button:hover{
+     background-color: #0c5e45;
+}
+.match{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: opacity 0.5s ease 0.5s;
+}
+.winner{
+    color: rgb(224, 224, 224);
+    text-align: center;
+    font-size: 50px;
+}
+.hands,.options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.player-hand{
+    transform: rotateY(180deg);
+}
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes shakePlayer{
+    0%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    15%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    25%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    35%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    50%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    65%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    75%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    85%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    100%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+@keyframes shakeComp{
+    0%{
+        transform:  translateY(0px);
+    }
+    15%{
+        transform:  translateY(-50px);
+    }
+    25%{
+        transform:  translateY(0px);
+    }
+    35%{
+        transform:  translateY(-50px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    65%{
+        transform: translateY(-50px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    85%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
+/* Responsive Code */
+
+@media screen and (min-width:320px){
+	body{
+	overflow:hidden;
+}
+    .winner{
+	
+	font-size:30px;
+}
+	.score{
+	padding-top:40px;
+	padding-left:20px;
+}
+     .hands{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+	.options{
+	display:block;
+	position:absolute;
+	bottom:5%;
+	left:50%;
+	transform:translate(-50%,130%);
+}
+	.hands img{
+	width:90px;
+	height:90px;
+}
+	.intro h1{
+    font-size: 35px;
+    margin:32px 90px;
+}
+
+}
+
+
+/*
+@media screen and (min-width:768px){
+	section{
+	width:100%;
+	overflow:hidden;
+}
+    .intro h1{
+        font-size: 30px;
+        margin-right: 75px;
+    }
+    .match img{
+        width: 140px;
+        height: 140px;
+    }
+    .match h2{
+        font-size: 30px;
+    }
+    .score h2{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .options{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .options button{
+        margin-top: 20px;
+    }
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
